@@ -1,0 +1,52 @@
+From assignment page:
+3. Select an industry
+4. Select two to three public data sets from that industry 
+
+Industry selection: 
+Not so much an industry, but you might call it politics of sociological?
+Idea: Do "Russian Trolls" emulate certain styles of Americanized speech, if so who do they choose to emulate?
+Any relation to a political party, class, region, or other demographic in the US?
+
+ Possible Data sources: https://github.com/fivethirtyeight/data (General)
+ - https://github.com/fivethirtyeight/russian-troll-tweets (3 million Russian troll tweets)
+ - https://catalog.docnow.io/datasets/20171211-tweets-to-donald-trump-realdonaldtrump/ (272,080,622 tweet ids for tweets directed at Donald Trump (@realDonaldTrump))
+ - https://zenodo.org/record/3732460#.X1Vkcot7kuU (Twitter Dataset of 70+ million tweets related to COVID-19)
+
+
+6. Formulate one or two ideas on how the data sets could be combined to establish additional value using exploratory data analysis 
+
+Downloaded:
+- https://github.com/fivethirtyeight/russian-troll-tweets (3 million Russian troll tweets)
+- https://data.world/wendyhe/tweets-on-womensmarch-and-maga (Tweets on WomensMarch and MAGA)
+
+Plan:
+Using womensmarchtweets.csv, MAGAtweets.csv, and IRAhandle_tweets_13.csv I'd like to create a 'master list' with the 3 sources distinguished.
+
+We'll mark them as MAGA tweets, Women's march tweets, and confirmed troll tweets. This should give us a chance to see if the troll tweets match either one of the MAGA/March. 
+
+Due to the political nature of MAGA and Women's march events I expect the content of them to be from two roughly different political sides. 
+Women's march being predominantly left, and MAGA being prodominantly right.
+
+If we see a pattern for one side or the other then the hypothesis of trolls emulating a certain 'side' could be correct.
+
+Practice:
+
+I created 1 file with the twitter ID, content of the tweet, and known language from the 3 csv files.
+There are 3 source conditions:
+- MAGA: From MAGAtweets.csv
+- WMARCH: from womensmarchtweets.csv
+- TROLL: from IRAhandle_tweets_13.csv
+
+Using the =detectlanguage(cell) function in Google Sheets I filled in the languages of MARCH and MAGA due to them not being available from the source documentation.
+I'm interested to know what languages the tweets are in as comparing text patterns and similarities between "authentic" tweets and "troll" tweets 
+pretty much depends on the source material being the same language (English).
+
+Results:
+Overall I don't think I understood the intention of this project or I'm not smart enough to do it on my own.
+Since this was my first time working with Pandas, Jupyter, and such I'm out of my depth when working with them on my own.
+Along with that the requirements seem a little vauge and it's difficult for me to say whether I met the requirements or not 
+	(e.g "Transform the data sets into a single data set while following data preparation processes to clean and transform features")
+While I found data sets, combined into one I thought was useful, and loaded them into Jupyter as instructed I don't feel as though I did what I was supposed to do. It feels like wasted effort on my part.
+Maybe this is because I can't really visualize my data well. Since it's all string based there's no clean way of showing information on graphs without further refinement. I'd have to actually do some analysis on the data to make it seem useful which I'm not capable of doing at this point in time.
+
+If I were to continue on this subject I would look into isolating common words and maybe short phrases. Common hashtags between the TROLL and other 2 sources would be a good visualization I believe.

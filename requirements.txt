@@ -1,0 +1,4 @@
+Requirements thus far:
+- Python
+- Anaconda (possibly?)
+- Jupyter notebook (possibly?)
